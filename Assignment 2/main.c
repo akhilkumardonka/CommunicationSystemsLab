@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
     int fc2 = 1200;
     fs = 6000;
     N=39;
-    float *out3 = lpf(fc, fs, N);
+    float *out3 = bpf(fc1, fc2, fs, N);
     printf("\n\nBand Pass Filter (fs = 6000) Output: \n");
     for(int loop = 0; loop < N; loop++){
         printf("%f, ", out3[loop]);
